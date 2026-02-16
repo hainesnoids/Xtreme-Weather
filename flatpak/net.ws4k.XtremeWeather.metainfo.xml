@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<component type="desktop-application">
+  <!--Created with jdAppStreamEdit 9.2-->
+  <id>net.ws4k.XtremeWeather</id>
+  <name>Xtreme Weather</name>
+  <summary>Advanced Weather Radar</summary>
+  <developer id="net.ws4k">
+    <name>hainesnoids</name>
+  </developer>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>AGPL-3.0-only</project_license>
+  <update_contact>hainesnoids@ws4k.net</update_contact>
+  <description>
+    <p>Xtreme Weather is an advanced weather radar application with the ability to customize alert colors, draw on the screen, and listen to NOAA Weather Radio stations.</p>
+  </description>
+  <screenshots>
+    <screenshot type="default">
+      <caption>Radar View</caption>
+      <image type="source">https://raw.githubusercontent.com/hainesnoids/XtremeWeather/refs/heads/main/flatpak/screenshots/radar.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Viewing Alert Information</caption>
+      <image type="source">https://raw.githubusercontent.com/hainesnoids/XtremeWeather/refs/heads/main/flatpak/screenshots/alert.png</image>
+    </screenshot>
+    <screenshot type="default">
+      <caption>Alert Settings Menu</caption>
+      <image type="source">https://raw.githubusercontent.com/hainesnoids/XtremeWeather/refs/heads/main/flatpak/screenshots/settings.png</image>
+    </screenshot>
+  </screenshots>
+  <releases>
+    <release version="1.0.0" date="2026-02-16" type="stable">
+      <description>
+        <p>v1.0.0</p>
+        <p>Initial Release</p>
+      </description>
+    </release>
+  </releases>
+  <url type="homepage">https://github.com/hainesnoids/Xtreme-Weather</url>
+  <url type="bugtracker">https://github.com/hainesnoids/Xtreme-Weather/issues</url>
+  <url type="vcs-browser">https://github.com/hainesnoids/Xtreme-Weather</url>
+  <url type="contribute">https://github.com/hainesnoids/Xtreme-Weather</url>
+  <requires>
+    <internet>always</internet>
+  </requires>
+  <recommends>
+    <control>gamepad</control>
+    <control>tv-remote</control>
+  </recommends>
+  <supports>
+    <control>pointing</control>
+    <control>keyboard</control>
+    <control>tablet</control>
+    <control>touch</control>
+  </supports>
+  <content_rating type="oars-1.1"/>
+  <launchable type="desktop-id">net.ws4k.XtremeWeather.desktop</launchable>
+  <keywords>
+    <keyword>radar</keyword>
+    <keyword>wx</keyword>
+    <keyword>weather</keyword>
+  </keywords>
+</component>

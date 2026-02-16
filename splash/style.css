@@ -1,0 +1,51 @@
+@import url("fonts/jetbrains-mono/jetbrains-mono.css");
+@import url("fonts/inter/inter.css");
+* {
+    box-sizing: border-box;
+    position: relative;
+    user-select: none;
+}
+body {
+    margin: 0;
+    font-family: "Inter", "Roboto Mono", "JetBrains Mono", sans-serif;
+    width: 576px;
+    height: 324px;
+    color: #fff;
+}
+.main {
+    display: flex;
+    flex-direction: row;
+}
+.cell,
+.main > div {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.info {
+    background-image: url('info-background.png');
+    font-family: "JetBrains Mono", sans-serif;
+    font-size: 12px;
+    padding: 24px 16px;
+}
+
+.name {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    margin: 0 0 16px;
+}
+.flex-space {
+    height: 12px;
+}
+.flex-spacer {
+    flex: 1;
+}
+.logo {
+    position: absolute;
+    right: 16px;
+    bottom: 16px;
+    width: 36px;
+    height: 36px;
+}

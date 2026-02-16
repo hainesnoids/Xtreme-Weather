@@ -1,0 +1,9 @@
+/* jetbrains-mono-medium */
+@font-face {
+	font-family: "JetBrains Mono";
+	font-style: normal;
+	font-weight: 500;
+	font-stretch: 100%;
+	src: local("JetBrains Mono Medium"), local("JetBrainsMono-Medium"), url(jetbrains-mono-medium.woff2) format("woff2");
+}
+

@@ -1,0 +1,74 @@
+/* fix shit */
+* {
+    box-sizing: border-box;
+}
+#top-control-bar {
+    margin: 0;
+    width: 100%;
+    height: 64px;
+    background: none;
+    border: none;
+    padding: 12px;
+}
+#top-info {
+    background: #14111F;
+    border: 2px solid #636381;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+#menu-toggle {
+    background: #14111F;
+    border: 2px solid #636381;
+    padding: 8px;
+    border-radius: 12px;
+}
+#control-bar {
+    border-width: 1px 0 0;
+    border-radius: 0;
+    width: 100%;
+    height: 56px;
+}
+#map {
+    top: 0;
+}
+/*
+.control-button {
+    border-width: 2px 0 2px;
+    border-top-color: transparent;
+    background-color: #3b3b51;
+    color: #fff;
+}
+.control-button:not([style="background-color: rgb(99, 99, 129); color: white; border: 2px solid white;"]):not([style="border: 2px solid white; background-color: rgb(99, 99, 129); color: white;"]) {
+    border-bottom-color: #fff;
+    background-color: rgb(99, 99, 129);
+}
+.control-button[style="background-color: rgb(99, 99, 129); color: white; border: 2px solid white;"], .control-button[style="border: 2px solid white; background-color: rgb(99, 99, 129); color: white;"] {
+    border-bottom-color: rgb(99, 99, 129);
+}
+*/
+#side-menu.show {
+    animation: menuSlideIn .3s ease forwards;
+}
+#side-menu.hide {
+    animation: menuSlideOut .3s ease forwards;
+}
+@keyframes menuSlideIn {
+    from {
+        opacity: 1;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes menuSlideOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(-100%);
+    }
+}

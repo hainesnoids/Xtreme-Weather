@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Xtreme Weather
+Exec=startxtremeweather %U
+Terminal=false
+Type=Application
+Icon=net.ws4k.XtremeWeather
+StartupWMClass=XtremeWeather
+Categories=Internet;
+Keywords=Weather;WX;Radar;
+Comment=Advanced Weather Radar

@@ -1,0 +1,17 @@
+/* inter-18pt */
+@font-face {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-stretch: 100%;
+	src: local("Inter 18pt Regular"), local("Inter18pt-Regular"), url(inter-18pt.woff2) format("woff2");
+}
+
+/* inter-28pt-bold */
+@font-face {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-stretch: 100%;
+    src: local("Inter 28pt Bold"), local("Inter28pt-Bold"), url(inter-28pt-bold.woff2) format("woff2");
+}
