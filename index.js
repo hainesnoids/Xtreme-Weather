@@ -72,12 +72,15 @@ async function createWindow() {
     // create splash screen
     await createSplashWindow();
 
+    // implement this
+    // https://www.electronjs.org/docs/latest/tutorial/custom-title-bar
     win = new electron.BrowserWindow({
         width: 1200,
         height: 675,
         backgroundColor: '#282828',
         fullscreenable: true,
-        titleBarStyle: 'default',
+        //titleBarStyle: 'hidden',
+        titleBarOverlay: true,
         frame: true,
         show: false,
         webPreferences: {
