@@ -1,6 +1,6 @@
 //initialization
+const path = require('node:path')
 const electron = require('electron')
-const path = require('path')
 const minimist = require('minimist')
 
 electron.app.setName('Xtreme Weather')
@@ -12,7 +12,7 @@ let splashWin;
 
 async function main() {
     electron.app.on('window-all-closed', () => {
-        if (process.platform !== 'darwin') electron.app.quit()
+        if (process.platform === 'darwin') electron.app.quit()
     })
 
     await electron.app.whenReady();
@@ -109,7 +109,6 @@ async function createWindow() {
             //console.log('showtime')
             win.show();
             electron.BrowserWindow.getAllWindows()[1].close();
-            //setTimeout(() => {closeThatStupidFuckingSplashScreen()},2000)
         }
     }
 
@@ -144,7 +143,9 @@ async function createSplashWindow() {
     })
     splashWin.setMenuBarVisibility(false)
     splashWin.setAutoHideMenuBar(false)
-    splashWin.setWindowButtonVisibility(false) // hide traffic lights on macOS
+    if (process.platform === 'darwin') {
+        splashWin.setWindowButtonVisibility(false) // hide traffic lights on macOS
+    }
     splashWin.once('ready-to-show', () => {
         splashWin.show();
     })
