@@ -134,3 +134,4 @@ flatpak/generated-sources.json
 
 # other stuff
 package-lock.json
+.idea
