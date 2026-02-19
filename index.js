@@ -12,7 +12,7 @@ let splashWin;
 
 async function main() {
     electron.app.on('window-all-closed', () => {
-        if (process.platform === 'darwin') electron.app.quit()
+        if (process.platform !== 'darwin') electron.app.quit()
     })
 
     await electron.app.whenReady();
@@ -79,7 +79,8 @@ async function createWindow() {
         height: 675,
         backgroundColor: '#282828',
         fullscreenable: true,
-        //titleBarStyle: 'hidden',
+        titleBarStyle: 'hidden',
+        trafficLightPosition: { x: 16, y: 16 },
         titleBarOverlay: true,
         frame: true,
         show: false,
@@ -99,6 +100,14 @@ async function createWindow() {
     win.once('ready-to-show', () => {
         //console.log('ready show')
         itsShowtime();
+    })
+
+    win.webContents.on('dom-ready', () => {
+        if (process.platform === 'darwin') {
+            win.webContents.send('is-darwin')
+        } else {
+            win.webContents.send('is-not-darwin')
+        }
     })
 
     win.webContents.on('did-finish-load', () => {

@@ -4,35 +4,75 @@
 #top-control-bar {
     margin: 0;
     width: 100%;
-    height: 56px;
-    border-width: 0 0 1px;
-    border-style: solid;
-    border-color: #636381;
-    padding: 0 12px;
-    border-radius: 0;
-    app-region: drag;
+    height: 64px;
+    background: none;
+    border: none;
+    padding: 6px 12px;
 }
 #top-info {
     background: #14111F;
-    border-width: 0 1px;
-    border-style: solid;
-    border-color: #636381;
+    border: 2px solid #636381;
     padding: 4px 10px;
-    border-radius: 0;
-    height: 100%;
-    display: flex;
+    border-radius: 12px;
+    height: 52px;
     justify-content: center;
-    align-items: center;
-    app-region: no-drag;
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    transform: translate(-50%, 0);
+    gap: 2px;
+}
+#top-info * {
+    line-height: 1;
+}
+#top-info > div {
+    margin: 0;
+}
+.station-detail-box {
+    top: 64px;
+}
+#top-info::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    height: 30px;
+    app-region: drag;
+    -webkit-app-region: drag;
+    border-radius: 12px 12px 0 0;
+}
+/* emphasize you need to click the 2nd line to view radar info (1st line is window drag area) */
+#station-info-line2 {
+    position: relative;
+}
+#station-info-line2::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1px;
+    right: -4px;
+    bottom: -2px;
+    left: -4px;
+    border-radius: 4px;
+    transition: background-color .2s ease;
+    z-index: -1;
+}
+#top-info:hover #station-info-line2::after {
+    background-color: #ffffff40;
 }
 #menu-toggle {
     background: #14111F;
-    border-width: 0 1px;
-    border-style: solid;
-    border-color: #636381;
+    border: 2px solid #636381;
     padding: 8px;
-    border-radius: 0;
-    height: 100%;
+    border-radius: 12px;
+    height: 52px;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+}
+#side-menu, #layers-submenu {
     app-region: no-drag;
 }
 #control-bar {
@@ -70,6 +110,14 @@
         transform: translateX(-100%);
     }
 }
-#side-menu {
-    app-region: no-drag;
+
+/* WINDOW CONTROLS */
+#window-controls {
+    background: #14111F;
+    border: 2px solid #636381;
+    padding: 8px;
+    border-radius: 12px;
+    position: absolute;
+    right: 12px;
+    top: 6px;
 }
